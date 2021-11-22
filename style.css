@@ -1,0 +1,71 @@
+
+        html {
+            box-sizing: border-box;
+        }
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        html,
+        body {
+            height: 100%;
+            
+        }
+        html {
+            font-family: "Helvetica Neue", Arial, serif;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        body {
+            background-color: #af3030;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        input {
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            border: 0 !important;
+            position: absolute !important;
+            overflow: hidden !important;
+            clip: rect(1px, 1px, 1px, 1px) !important;
+        }
+        label {
+            background-color: mintcream;
+            color: #4f4f4f;
+            display: block;
+            padding: 0 2em;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5%;
+            transition: all 0.2s ease-in-out;
+            line-height: 3;
+        }
+        label:after {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #efefef;
+            width: 1.5em;
+            display: none;
+            position: absolute;
+            left: 0;
+            content: "✔";
+            font-size: 2em;
+            line-height: 1.5;
+            text-align: center;
+            border-radius: 5% 0 0 5%;
+        }
+        input:checked + label {
+            background-color: green;
+            color: #efefef;
+            padding-left: 3.5em;
+            padding-right: 1.0em;
+        }
+        input:checked + label:after {
+            display: inline;
+        }
+       
